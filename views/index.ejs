@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- <script src="/js/jquery.min.js" charset="utf-8"></script> -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <style> @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap'); </style>
+
+  </head>
+  <body>
+      <form class="form"  method="post">
+        <div class="buttons">
+          <label for="invoiceTo">Parent:</label>
+
+          <select name="parent" id="parents">
+            <option value="parent0">Select Parent</option>
+            <option value="1-2-1 Session AA Gumel ">1-2-1 Session AA Gumel</option>
+            <option value="1-2-1 Session Aaliyah Imran">1-2-1 Session Aaliyah Imran</option>
+            <option value="1-2-1 Session Abdullah and Uthman">1-2-1 Session Abdullah and Uthman</option>
+            <option value="1-2-1 Session Abubakr, Umar and Uthman">1-2-1 Session Abubakr, Umar and Uthman</option>
+            <!-- <option value="1-2-1 Session Aisha Oladapo">1-2-1 Session Aisha Oladapo</option> -->
+            <option value="1-2-1 Session Ali Adamu">1-2-1 Session Ali Adamu</option>
+            <option value="1-2-1 Session Aliyah and Annat">1-2-1 Session Aliyah and Annat</option>
+            <option value="1-2-1 Session Al-Mustapha and Aisha">1-2-1 Session Al-Mustapha and Aisha</option>
+            <option value="1-2-1 Session Amal">1-2-1 Session Amal</option>
+            <option value="1-2-1 Session Aminah Imran">1-2-1 Session Aminah Imran</option>
+            <option value="1-2-1 Session Amins">1-2-1 Session Amins</option>
+            <option value="1-2-1 Session Arabic Group 1">1-2-1 Session Arabic Group 1</option>
+            <option value="1-2-1 Session Faris and Ibrahim">1-2-1 Session Faris and Ibrahim</option>
+            <option value="1-2-1 Session Farouk and Aisha">1-2-1 Session Farouk and Aisha</option>
+            <option value="1-2-1 Session Fatima-Zahra Hassan">1-2-1 Session Fatima-Zahra Hassan</option>
+            <option value="1-2-1 Session Fawziyah, Naimah and Ibrahim">1-2-1 Session Fawziyah, Naimah and Ibrahim</option>
+            <option value="1-2-1 Session for Ahmad, Abdallah and Maryam">1-2-1 Session for Ahmad, Abdallah and Maryam</option>
+            <option value="1-2-1 Session for Fatimah & Monsuru">1-2-1 Session for Fatimah & Monsuru</option>
+            <option value="1-2-1 Session for Hajar Zainab and Amina Noor">1-2-1 Session for Hajar Zainab and Amina Noor</option>
+            <option value="1-2-1 Session Hawwah and Sumay...">1-2-1 Session Hawwah and Sumay...</option>
+            <option value="1-2-1 Session Ibrahim H">1-2-1 Session Ibrahim H</option>
+            <option value="1-2-1 Session Khadijah Aminu">1-2-1 Session Khadijah Aminu</option>
+            <option value="1-2-1 Session Maryam and Fatima">1-2-1 Session Maryam and Fatima</option>
+            <option value="1-2-1 Session Maryam and Muhammad">1-2-1 Session Maryam and Muhammad</option>
+            <option value="1-2-1 Session Maryam, Muhammad and Khadija">1-2-1 Session Maryam, Muhammad and Khadija</option>
+            <option value="1-2-1 Session Moosa Al-Asghar">1-2-1 Session Moosa Al-Asghar</option>
+            <option value="1-2-1 Session Muhammed Awwal and Ameerah">1-2-1 Session Muhammed Awwal and Ameerah</option>
+            <!-- <option value="1-2-1 Session Muneera and El-Ameen">1-2-1 Session Muneera and El-Ameen</option> -->
+            <option value="1-2-1 Session Nima, Amina, Hanan and Imam">1-2-1 Session Nima, Amina, Hanan and Imam</option>
+            <option value="1-2-1 Session Nour Ahmad">1-2-1 Session Nour Ahmad</option>
+            <option value="1-2-1 Session Umar and Abdullahi">1-2-1 Session Umar and Abdullahi</option>
+            <option value="1-2-1 Sessions AbdurRahman Ahmed">1-2-1 Sessions AbdurRahman Ahmed</option>
+            <option value="1-2-1 Sessions Bilkisu and Khadija">1-2-1 Sessions Bilkisu and Khadija</option>
+            <option value="1-2-1 Session Faizah Badmus">1-2-1 Session Faizah Badmus</option>
+            <option value="1-2-1 Session for Muhammad, Raheel and Muhsin">1-2-1 Session for Muhammad, Raheel and Muhsin</option>
+            <option value="1-2-1 Session Rukayat Bamigbade-salmon">1-2-1 Session Rukayat Bamigbade-salmon</option>
+            <option value="1-2-1 Session Sister Tahira">1-2-1 Session Sister Tahira</option>
+          </select>
+          <button class="btn" type="submit" name="button">Create Invoice</button>
+          <button class="btn btn2" id="downloadButton" type="button" name="button">download pdf</button>
+
+        </div>
+          <div class="invoice" id="invoice1">
+            <div class="topDiv">
+              <div class="topLeft">
+                <h2>1-2-1/FAMILY PACKAGE MONTHLY INVOICE</h2>
+                <!-- <h2>Monthly Invoice</h2> -->
+
+                <p><strong>Period: </strong> <%= indexPeriod %> </p>
+
+                <p><strong>INVOICE FOR: </strong> <%= indexInvoiceTo %>  </p>
+
+              </div>
+              <div class="topRight">
+                <h2><em>NMFUK eSchool</em></h2>
+                <p>eSchool@nmfuk.org</p>
+                <img src="images/logo.png" width="200px" alt="Nutureroots logo">
+
+
+              </div>
+            </div>
+
+            <div class="main">
+              <div class="details">
+                <h3 class="detail">PACKAGE</h3>
+                <h3 class="detail">HOURS COMPLETED</h3>
+                <h3 class="detail">HOURLY RATE</h3>
+                <h3 class="detail">TOTAL FEES</h3>
+              </div>
+              <hr>
+              <div class="values">
+                <h4 class="detail">1 to 1</h4>
+                <h4 class="detail"> <%= hours121 %> </h4>
+                <h4 class="detail"> <%= hourlyRate121 %> </h4>
+                <h4 class="detail"> <%= total121 %> </h4>
+              <!-- </div> -->
+              <!-- <div class="values"> -->
+                <h4 class="detail">Family Package B</h4>
+                <h4 class="detail"> <%= hoursB %> </h4>
+                <h4 class="detail"> <%= hourlyRateB %> </h4>
+                <h4 class="detail"> <%= totalB %> </h4>
+              <!-- </div> -->
+              <!-- <div class="values"> -->
+                <h4 class="detail">Family Package A</h4>
+                <h4 class="detail"> <%= hoursA %> </h4>
+                <h4 class="detail"> <%= hourlyRateA %> </h4>
+                <h4 class="detail"> <%= totalA %> </h4>
+                <div class="total">
+                  <label for=""><strong>Total: </strong></label>
+                  <p class="totalP detail">£<%= total %></p>
+                </div>
+              </div>
+
+
+
+
+            </div>
+            <div class="payment">
+              <p><strong>Agreed Lesson Schedule: </strong><%= lessonSchedule %></p>
+              <h2>Please Pay:</h2>
+              <p>UK Bank Account Details</p>
+              <p>Account Name: Shamsudeen Hassan</p>
+              <p>Acct No: 93183084</p>
+              <p>Sort Code: 608371</p>
+              <p>Bank: Starling</p>
+              <p>Payment Reference: <strong><%= paymentRef %></strong></p>
+
+              <p>Please contact us via <a href="mailto:eschool@nmfuk.org?subject=feedback">eschool@nmfuk.org</a> if you are unable to pay via the account provided.</p>
+            </div>
+            <div class="footer">
+                <div class="footdiv footLeft">
+                  <p><strong>Reported Absence:</strong> Absence where tutor was notified in advance.</p>
+                  <p><strong>Unreported Absence:</strong> Absence where tutor joined the class and waited.</p>
+                </div>
+                <div class="footdiv footRight">
+                  <h3>Package Rates:</h3>
+                  <p><strong>- <em>family package A 'more than 3 students'</em></strong><em>(hourly rate: £3.80)</em></p>
+                  <p><strong>- <em>family package B '2 to 3 students'</em></strong><em>(hourly rate: £2.99)</em></p>
+                  <p><strong>- <em>1 to 1 'Only 1 students'</em></strong><em>(hourly rate: £2.30)</em></p>
+                </div>
+            </div>
+
+         </div>
+      </form>
+
+
+    <script>
+      window.onload = function(){
+        document.getElementById("downloadButton").addEventListener("click",function(){
+          const invoice = document.getElementById("invoice1");
+          console.log("button clicked.");
+          console.log(invoice);
+          console.log(window);
+          var opt = {
+            filename: "<%= indexInvoiceTo %>" + ".pdf"
+          }
+          html2pdf().from(invoice).set(opt).save();
+        });
+      };
+    </script>
+  </body>
+</html>
