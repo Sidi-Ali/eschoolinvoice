@@ -24,10 +24,20 @@ app.set("view engine", "ejs");
 app.use(express.static("public"));
 
 const connection = mysql.createConnection({
-  host: "localhost",
-  user: "sideee",
-  password: "sweet",
-  database: "nmfInvoiceDB"
+  host:"eschoolinvoicemysqlserver.mysql.database.azure.com",
+  username:"eschooladmin",
+  password:"Password@1",
+  database:"eschoolinvoicedb",
+  port:3306, 
+  ssl:{ca:fs.readFileSync("{ca-cert filename}")}
+
+//   var conn=mysql.createConnection({host:"eschoolinvoicemysqlserver.mysql.database.azure.com", user:"eschooladmin", password:"{your_password}", database:"{your_database}", port:3306, ssl:{ca:fs.readFileSync("{ca-cert filename}")}});
+  
+  
+//   host: "localhost",
+//   user: "sideee",
+//   password: "sweet",
+//   database: "nmfInvoiceDB"
 });
 
 
